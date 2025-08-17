@@ -1,0 +1,40 @@
+
+
+.bulletin-board {
+    padding: 0 30px;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #333;
+    padding: 1rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.2s ease;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+}
+
+.accordion:hover {
+    background-color: #ccc;
+    text-decoration: underline;
+}
+
+.panel {
+    padding: 0 1rem;
+    display: none;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    border-left: 4px solid #999;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 0.5rem;
+}
+
+.panel p {
+    margin: 0.5rem 0;
+}
+

@@ -1,0 +1,317 @@
+:root {
+  --brand: #1f4bff;
+  --brand-2: #0ea5e9;
+  --ink: #0f172a;
+  --muted: #64748b;
+  --bg: #ffffff;
+  --bg-soft: #f8fafc;
+  --ring: 0 0 0 3px rgba(31, 75, 255, .15);
+  --radius: 1.25rem;
+  --shadow-sm: 0 6px 18px rgba(15, 23, 42, .06);
+  --shadow-md: 0 14px 30px rgba(15, 23, 42, .10);
+  --shadow-lg: 0 24px 48px rgba(15, 23, 42, .12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e5e7eb;
+    --muted: #9ca3af;
+    --bg: #0b1020;
+    --bg-soft: #0f172a;
+    --shadow-sm: 0 6px 18px rgba(0, 0, 0, .35);
+    --shadow-md: 0 14px 30px rgba(0, 0, 0, .45);
+    --shadow-lg: 0 24px 48px rgba(0, 0, 0, .5);
+  }
+
+  body {
+    background: var(--bg);
+  }
+
+  .card,
+  .accordion-item,
+  .p-4.rounded-4 {
+    background: #0f172a !important;
+    border-color: rgba(255, 255, 255, .06) !important;
+  }
+
+  .sticky-top-blur {
+    background: rgba(11, 16, 32, .7);
+    border-bottom-color: rgba(255, 255, 255, .08);
+  }
+}
+
+/* =========================
+     Base
+  ==========================*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.container {
+  max-width: 1120px;
+}
+
+/* 滑動條（桌面美化） */
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--brand), var(--brand-2));
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* =========================
+     Navbar / Hero
+  ==========================*/
+.sticky-top-blur {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  backdrop-filter: saturate(180%) blur(12px);
+  background: rgba(255, 255, 255, .85);
+  border-bottom: 1px solid rgba(0, 0, 0, .06);
+}
+
+.hero {
+  background:
+    radial-gradient(1200px 600px at 70% -10%, rgba(31, 75, 255, .08), transparent),
+    radial-gradient(1000px 500px at -10% 10%, rgba(14, 165, 233, .08), transparent),
+    linear-gradient(180deg, var(--bg), var(--bg-soft));
+}
+
+.btn.btn-lg {
+  border-radius: calc(var(--radius) - .25rem);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn.btn-lg:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-dark {
+  background: linear-gradient(90deg, var(--brand), var(--brand-2));
+  border: none;
+}
+
+/* =========================
+     Cards / Category Grid
+  ==========================*/
+.card {
+  border: 1px solid rgba(0, 0, 0, .06);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(31, 75, 255, .18);
+}
+
+.card-title {
+  letter-spacing: .2px;
+}
+
+.cat-pill,
+.badge {
+  border-radius: 999px;
+}
+
+.bg-light {
+  background: var(--bg-soft) !important;
+}
+
+/* =========================
+     搜尋區 & 徽章濾鏡
+  ==========================*/
+.p-4.rounded-4 {
+  border-radius: calc(var(--radius) + .25rem) !important;
+  box-shadow: var(--shadow-sm);
+}
+
+.form-control {
+  border-radius: 14px;
+  padding: .8rem 1rem;
+  border-color: rgba(0, 0, 0, .08);
+}
+
+.form-control:focus {
+  border-color: var(--brand);
+  box-shadow: var(--ring);
+}
+
+.badge-cat {
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid rgba(0, 0, 0, .06);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .2s;
+}
+
+.badge-cat:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.badge-cat.active {
+  border-color: rgba(31, 75, 255, .25);
+  box-shadow: 0 0 0 3px rgba(31, 75, 255, .12);
+}
+
+/* =========================
+     Accordion / Timeline
+  ==========================*/
+.accordion-item {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, .06);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: .8rem;
+}
+
+.accordion-button {
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  gap: .6rem;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--ink);
+  background: linear-gradient(90deg, rgba(31, 75, 255, .08), rgba(14, 165, 233, .06));
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .05);
+}
+
+/* 自訂箭頭 */
+.accordion-button::after {
+  background-image: none;
+  transform: rotate(0deg);
+  transition: transform .2s ease;
+  content: "▾";
+  font-size: .9rem;
+  opacity: .7;
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+/* 時間軸左側豎線效果（以 :before 畫線） */
+#timeline .accordion .accordion-item {
+  position: relative;
+}
+
+#timeline .accordion .accordion-item::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: 28px;
+  bottom: 12px;
+  width: 2px;
+  background: linear-gradient(var(--brand), var(--brand-2));
+  opacity: .25;
+}
+
+#timeline .accordion .accordion-item::after {
+  content: "";
+  position: absolute;
+  left: -22px;
+  top: 22px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, var(--brand), var(--brand-2));
+  box-shadow: 0 0 0 4px rgba(31, 75, 255, .12);
+}
+
+/* =========================
+     Mentors 卡片頭像占位（可選）
+  ==========================*/
+#mentors .card-body {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+#mentors .card-title {
+  margin-bottom: .25rem;
+}
+
+#mentors .badge {
+  box-shadow: var(--shadow-sm);
+}
+
+/* =========================
+     FAQ 微調
+  ==========================*/
+#faq .accordion-item {
+  border-radius: 16px;
+}
+
+#faq .accordion-button {
+  border-radius: 16px;
+}
+
+/* =========================
+     微動效
+  ==========================*/
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card,
+.accordion-item {
+  animation: fadeUp .35s ease both;
+}
+
+/* =========================
+     Utilities / 小工具
+  ==========================*/
+.link-dark:hover {
+  color: var(--brand) !important;
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-sm);
+}
+
+.shadow-float {
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================
+     響應式微調
+  ==========================*/
+@media (max-width: 991.98px) {
+  .display-5 {
+    font-size: 2.25rem;
+  }
+
+  .hero .p-4 {
+    padding: 1.25rem !important;
+  }
+
+  #timeline .accordion .accordion-item::before,
+  #timeline .accordion .accordion-item::after {
+    left: -14px;
+  }
+}

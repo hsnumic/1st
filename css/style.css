@@ -1,0 +1,52 @@
+/* body */
+body {
+    font-family: sans-serif;
+}
+
+/* :root {
+    --bg-paper: #f1f0e4;
+
+
+    --brand: #1f4bff;
+    --brand-2: #0ea5e9;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --bg: #ffffff;
+    --bg-soft: #f8fafc;
+    --ring: 0 0 0 3px rgba(31, 75, 255, .15);
+    --radius: 1.25rem;
+    --shadow-sm: 0 6px 18px rgba(15, 23, 42, .06);
+    --shadow-md: 0 14px 30px rgba(15, 23, 42, .10);
+    --shadow-lg: 0 24px 48px rgba(15, 23, 42, .12);
+    --bg: #F1F0E4;
+    --paper: #F1F0E4;
+    --card: #ffffff;
+    --ink: #3b3b3b;
+    --muted: #8a8a8a;
+    --accent: #ad7b56;
+    --radius: 16px;
+    --shadow: 0 .35rem 1.25rem rgba(0, 0, 0, .08);
+    --green: #2a9d8f;
+    --light: #f9f9f9;
+} */
+
+
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    color: #fff;
+    background: #4e453e;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #666;
+    color: #fff;
+}

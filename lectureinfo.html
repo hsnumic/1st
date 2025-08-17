@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>附中推理研究社</title>
+    <meta charset="UTF-8">
+
+    <!-- 響應式網站 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Boostrap5.0 導入程式 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- 連結導覽列CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- body -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Navbar -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <!-- lectureinfo -->
+    <link rel="stylesheet" href="css/lectureinfo.css">
+    <!-- Footer -->
+    <link rel="stylesheet" href="css/footer.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+
+        <div class="container-fluid">
+            <!-- 品牌logo -->
+            <a class="navbar-brand" href="#"><img width="50px" height="50px" src="images/mic.jpg"></a>
+            <div class="logo">附中推理研究社</div>
+
+            <!-- 第一部份：手機版 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 第二部份：桌上型電腦版 -->
+
+            <div class="collapse navbar-collapse" id="linkbar">
+                <!-- 列出內容 -->
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="clubinfo.html">社團介紹</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="#">教學內容</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="puzzle.html">謎題</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">登入</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">註冊</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <header class="hero py-5">
+        <br><br><br>
+        <div class="container">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-8">
+                    <h1 class="display-5 fw-bold">體驗解謎的樂趣<br>並鑽研推理文學及相關知識</h1>
+                    <p class="lead mb-3">
+                        18 週×2 學期的系統化課程：推理文學、電影與劇本、邏輯與密碼、犯罪心理與鑑識、實境解謎設計，到最終成果發表。
+                    </p>
+                    <ul class="mb-4">
+                        <li>上學期聚焦體驗與基礎能力（推理/邏輯/密碼/心理）</li>
+                        <li>下學期進入創作與設計（實境/機關/遊戲體驗/成果發表）</li>
+                    </ul>
+                    <a href="#timeline" class="btn">查看時間軸</a>
+                </div>
+                <div class="col-lg-4">
+                    <img src="images/introcat.png" class="img-fluid intro-image">
+                </div>
+                <!-- <div class="col-lg-5">
+                    <div class="p-4 rounded-4 border bg-white shadow-sm">
+                        <h5 class="mb-3">快速搜尋課程</h5>
+                        <div class="input-group mb-2">
+                            <input id="searchInput" type="search" class="form-control" placeholder="輸入關鍵字（如：密碼學、電影、實境）">
+                            <button class="btn btn-outline-secondary" id="clearSearch">清除</button>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2">
+
+                            <span class="badge text-bg-primary badge-cat" data-cat="入門">入門</span>
+                            <span class="badge text-bg-secondary badge-cat" data-cat="推理文學">推理文學</span>
+                            <span class="badge text-bg-success badge-cat" data-cat="電影/劇本">電影/劇本</span>
+                            <span class="badge text-bg-warning text-dark badge-cat" data-cat="邏輯/謎題">邏輯/謎題</span>
+                            <span class="badge text-bg-info text-dark badge-cat" data-cat="桌遊/遊戲化">桌遊/遊戲化</span>
+                            <span class="badge text-bg-dark badge-cat" data-cat="密碼學">密碼學</span>
+                            <span class="badge text-bg-danger badge-cat" data-cat="心理/鑑識">心理/鑑識</span>
+                            <span class="badge text-bg-light text-dark badge-cat" data-cat="實境/設計">實境/設計</span>
+                            <span class="badge text-bg-secondary badge-cat" data-cat="產出/發表">產出/發表</span>
+                        </div>
+                        <small class="text-muted d-block mt-2">資料整理自社課計畫（上/下學期）。</small>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </header>
+
+    <!-- CATEGORIES -->
+    <section id="categories" class="py-5">
+        <div class="container">
+            <h2 class="fw-bold mb-4">課程分類導覽</h2>
+            <div class="row g-4">
+                <!-- 9 categories -->
+                <div class="col-6 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">入門</h5>
+                            <p class="card-text">幹部與課程介紹。</p>
+                            <span class="badge rounded-pill text-bg-primary cat-pill">入門</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">推理文學與作品</h5>
+                            <p class="card-text">經典與現代推理、犯罪手法與時事。</p>
+                            <span class="badge rounded-pill text-bg-secondary cat-pill">推理文學/時事</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">電影與劇本</h5>
+                            <p class="card-text">推理電影賞析、劇本殺體驗與分析。</p>
+                            <span class="badge rounded-pill text-bg-secondary cat-pill">電影/劇本</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">邏輯與謎題</h5>
+                            <p class="card-text">海龜湯、謎題、機關與解鎖與劇本殺。</p>
+                            <span class="badge rounded-pill text-bg-warning text-dark cat-pill">邏輯/謎題</span>
+                            <span class="badge rounded-pill text-bg-info text-dark cat-pill">活動</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">桌遊與策略遊戲</h5>
+                            <p class="card-text">解謎型桌遊、狼人殺等體驗。</p>
+                            <span class="badge rounded-pill text-bg-warning text-dark cat-pill">桌遊/策略</span>
+                            <span class="badge rounded-pill text-bg-info text-dark cat-pill">活動</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">實境解謎與設計</h5>
+                            <p class="card-text">附中實境體驗、遊戲體驗設計。</p>
+                            <span class="badge rounded-pill text-bg-success text-light cat-pill">實境/設計</span>
+                            <span class="badge rounded-pill text-bg-info text-dark cat-pill">活動</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">密碼學</h5>
+                            <p class="card-text">從古典密碼學到現代密碼學，循序漸進。</p>
+                            <span class="badge rounded-pill text-bg-dark cat-pill">密碼學</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">犯罪心理與鑑識</h5>
+                            <p class="card-text">犯罪心理學、犯罪鑑識科學。</p>
+                            <span class="badge rounded-pill text-bg-danger cat-pill">犯罪/心理/鑑識</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">創作與成果發表</h5>
+                            <p class="card-text">劇本／謎題實作與期末成果發表。</p>
+                            <span class="badge rounded-pill text-bg-success cat-pill">創作/成果發表</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline" class="py-5">
+        <div class="container">
+            <h2 class="fw-bold mb-4">學期時間軸（18 週）</h2>
+
+            <!-- 上學期 -->
+            <div class="mb-4">
+                <h4 class="mb-3">2025.9 上學期</h4>
+                <div class="accordion" id="accUp">
+                    <!-- 只示範關鍵週次；其餘週可按此格式繼續複製 -->
+                    <div class="accordion-item" data-cats="入門,邏輯/謎題">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#u1">
+                                W1｜體驗社課：海龜湯＋課程介紹
+                            </button>
+                        </h2>
+                        <div id="u1" class="accordion-collapse collapse show" data-bs-parent="#accUp">
+                            <div class="accordion-body">
+                                體驗海龜湯-短短故事帶來的龐大懸疑成分的樂趣，並練習設計出小組的海龜湯。
+                                <br>授課者：吳泰樂、項舒芸。
+                                <span class="badge text-bg-primary ms-2">入門</span>
+                                <span class="badge text-bg-warning text-dark ms-1">邏輯/謎題</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-cats="推理文學">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#u2">
+                                W2｜幹部介紹及推理小說常見犯罪手法（1/2）
+                            </button>
+                        </h2>
+                        <div id="u2" class="accordion-collapse collapse" data-bs-parent="#accUp">
+                            <div class="accordion-body">
+                                各幹部及老師自我介紹、認識推理小說最常見的犯罪手法<br>
+                                授課者：項舒芸。
+                                <span class="badge text-bg-primary ms-2">入門</span>
+                                <span class="badge rounded-pill text-bg-secondary cat-pill">推理文學/時事</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-cats="推理文學">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#u3">
+                                W3｜推理小說常見犯罪手法（1/2）
+                            </button>
+                        </h2>
+                        <div id="u3" class="accordion-collapse collapse" data-bs-parent="#accUp">
+                            <div class="accordion-body">
+                                認識密室是怎麼被設計出來的，以及體驗假案推理小組活動<br>
+                                授課者：項舒芸。
+                                <span class="badge rounded-pill text-bg-secondary cat-pill">推理文學/時事</span>
+                                <span class="badge rounded-pill text-bg-info text-dark cat-pill">活動</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-cats="推理文學">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#u4">
+                                W4｜推理經典文學
+                            </button>
+                        </h2>
+                        <div id="u4" class="accordion-collapse collapse" data-bs-parent="#accUp">
+                            <div class="accordion-body">
+                                認識經典推理文學與脈絡。授課者：林千晴。
+                                <span class="badge rounded-pill text-bg-secondary cat-pill">推理文學/時事</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-cats="電影/劇本">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#u5">
+                                W5｜推理作品類型介紹
+                            </button>
+                        </h2>
+                        <div id="u5" class="accordion-collapse collapse" data-bs-parent="#accUp">
+                            <div class="accordion-body">
+                                認識推理作品的常見類型。<br>
+                                授課者：吳典頤。
+                                <span class="badge rounded-pill text-bg-secondary cat-pill">推理文學/時事</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-cats="電影/劇本">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#u6">
+                                W6｜狼人殺
+                            </button>
+                        </h2>
+                        <div id="u6" class="accordion-collapse collapse" data-bs-parent="#accUp">
+                            <div class="accordion-body">
+                                體驗狼人殺-角色扮演型的遊戲樂趣<br>
+                                授課者：吳泰樂。
+                                <span class="badge rounded-pill text-bg-warning text-dark cat-pill">桌遊/策略</span>
+                                <span class="badge rounded-pill text-bg-info text-dark cat-pill">活動</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-cats="電影/劇本">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#u7">
+                                W7–8｜推理電影賞析
+                            </button>
+                        </h2>
+                        <div id="u7" class="accordion-collapse collapse" data-bs-parent="#accUp">
+                            <div class="accordion-body">
+                                欣賞經典推理電影，學習敘事與線索鋪陳。授課者：張銓芬。<span class="badge text-bg-success ms-2">電影/劇本</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-cats="實境/設計,推理文學">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#u9">
+                                W9｜推理作品-附中實境解謎體驗
+                            </button>
+                        </h2>
+                        <div id="u9" class="accordion-collapse collapse" data-bs-parent="#accUp">
+                            <div class="accordion-body">
+                                認識推理經典文學的主要類型，以及體驗附中實境解謎小試身手。<br>
+                                授課者：吳典頤。
+                                <span class="badge rounded-pill text-bg-success text-light cat-pill">實境/設計</span>
+                                <span class="badge rounded-pill text-bg-info text-dark cat-pill">活動</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-cats="實境/設計,推理文學">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#u10">
+                                W10｜世界著名懸案介紹
+                            </button>
+                        </h2>
+                        <div id="u10" class="accordion-collapse collapse" data-bs-parent="#accUp">
+                            <div class="accordion-body">
+                                介紹世界上最著名的懸案。<br>
+                                授課者：吳典頤。
+                                <span class="badge rounded-pill text-bg-secondary cat-pill">推理文學/時事</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-cats="實境/設計,推理文學">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#u11">
+                                W11｜謎題的種類和相對應破解方法
+                            </button>
+                        </h2>
+                        <div id="u11" class="accordion-collapse collapse" data-bs-parent="#accUp">
+                            <div class="accordion-body">
+                                學習如何利用邏輯思考出解謎的脈絡。<br>
+                                授課者：任德駿。
+                                <span class="badge rounded-pill text-bg-warning text-dark cat-pill">邏輯/謎題</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-cats="實境/設計,推理文學">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#u12">
+                                W12｜體驗解謎型桌遊（1/2）
+                            </button>
+                        </h2>
+                        <div id="u12" class="accordion-collapse collapse" data-bs-parent="#accUp">
+                            <div class="accordion-body">
+                                把所學應用在解謎型桌遊上，培養小組默契。<br>
+                                授課者：吳翟。
+                                <span class="badge rounded-pill text-bg-warning text-dark cat-pill">桌遊/策略</span>
+                                <span class="badge rounded-pill text-bg-info text-dark cat-pill">活動</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-cats="桌遊/遊戲化">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#u13">
+                                W13｜邏輯類型的謎題
+                            </button>
+                        </h2>
+                        <div id="u13" class="accordion-collapse collapse" data-bs-parent="#accUp">
+                            <div class="accordion-body">
+                                學習如何利用已知線索解出謎題。<br>
+                                授課者：Amy。
+                                <span class="badge rounded-pill text-bg-warning text-dark cat-pill">邏輯/謎題</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-cats="實境/設計,推理文學">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#u14">
+                                W14｜體驗解謎型桌遊（2/2）
+                            </button>
+                        </h2>
+                        <div id="u14" class="accordion-collapse collapse" data-bs-parent="#accUp">
+                            <div class="accordion-body">
+                                把所學應用在解謎型桌遊上，培養小組默契。<br>
+                                授課者：吳翟。
+                                <span class="badge rounded-pill text-bg-warning text-dark cat-pill">桌遊/策略</span>
+                                <span class="badge rounded-pill text-bg-info text-dark cat-pill">活動</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-cats="密碼學">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#u15">
+                                W15｜密碼學初階
+                            </button>
+                        </h2>
+                        <div id="u15" class="accordion-collapse collapse" data-bs-parent="#accUp">
+                            <div class="accordion-body">
+                                認識最基礎的古典密碼學。<br>
+                                授課者：吳翟。
+                                <span class="badge rounded-pill text-bg-dark cat-pill">密碼學</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-cats="心理/鑑識">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#u16">
+                                W16–17｜犯罪心理學
+                            </button>
+                        </h2>
+                        <div id="u16" class="accordion-collapse collapse" data-bs-parent="#accUp">
+                            <div class="accordion-body">
+                                認識犯罪心理學的大架構以及基本知識、<br>
+                                剖析可樂投毒事件中犯罪心理學所扮演的角色。<br>
+                                授課者：吳泰樂。
+                                <span class="badge rounded-pill text-bg-secondary cat-pill">推理文學/時事</span>
+                                <span class="badge rounded-pill text-bg-danger cat-pill">犯罪/心理/鑑識</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-cats="入門,產出/發表">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#u18">
+                                W18｜總結上學期、小遊戲與頒獎
+                            </button>
+                        </h2>
+                        <div id="u18" class="accordion-collapse collapse" data-bs-parent="#accUp">
+                            <div class="accordion-body">
+                                總結整學期所學，並頒布個人獎MVP。<br>
+                                授課者：項舒芸。
+                                <span class="badge rounded-pill text-bg-success cat-pill">創作/成果發表</span>
+                                <span class="badge rounded-pill text-bg-info text-dark cat-pill">活動</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 下學期 -->
+            <div class="mb-4">
+                <h4 class="mb-3">2026.2 下學期</h4>
+                <div class="accordion" id="accDown">
+                    <div class="accordion-item" data-cats="入門">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#d1">
+                                W1｜課程介紹＋偽裝術
+                            </button>
+                        </h2>
+                        <div id="d1" class="accordion-collapse collapse" data-bs-parent="#accDown">
+                            <div class="accordion-body">
+                                介紹這學期課程安排+偽裝術的應用。<br>
+                                授課者：項舒芸、吳泰樂。
+                                <span class="badge text-bg-primary ms-2">入門</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item" data-cats="心理/鑑識">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#d2">
+                                W2–3｜犯罪鑑識科學
+                            </button>
+                        </h2>
+                        <div id="d2" class="accordion-collapse collapse" data-bs-parent="#accDown">
+                            <div class="accordion-body">
+                                學習犯罪鑑識科學的內容、<br>
+                                練習應用犯罪鑑識科學。<br>
+                                授課者：吳翟。
+                                <span class="badge rounded-pill text-bg-danger cat-pill">犯罪/心理/鑑識</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item" data-cats="電影/劇本">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#d4">
+                                W4–5｜劇本殺體驗與分析
+                            </button>
+                        </h2>
+                        <div id="d4" class="accordion-collapse collapse" data-bs-parent="#accDown">
+                            <div class="accordion-body">
+                                體驗劇本殺、<br>
+                                劇本殺的分析和應用。<br>
+                                授課者：Amy。
+                                <span class="badge rounded-pill text-bg-warning text-dark cat-pill">邏輯/謎題</span>
+                                <span class="badge rounded-pill text-bg-info text-dark cat-pill">活動</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item" data-cats="推理文學">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#d6">
+                                W6｜推理小說賞析
+                            </button>
+                        </h2>
+                        <div id="d6" class="accordion-collapse collapse" data-bs-parent="#accDown">
+                            <div class="accordion-body">
+                                賞析現代推理小說。<br>
+                                授課者：未定。
+                                <span class="badge rounded-pill text-bg-secondary cat-pill">推理文學/時事</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item" data-cats="推理文學">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#d7">
+                                W7｜推理作品怎麼寫的好－人物側寫的力量
+
+                            </button>
+                        </h2>
+                        <div id="d7" class="accordion-collapse collapse" data-bs-parent="#accDown">
+                            <div class="accordion-body">
+                                人物側寫／動機。<br>
+                                授課者：任德駿。
+                                <span class="badge rounded-pill text-bg-secondary cat-pill">推理文學/時事</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item" data-cats="實境/設計">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#d8">
+                                W8｜附中實境解謎體驗
+                            </button>
+                        </h2>
+                        <div id="d8" class="accordion-collapse collapse" data-bs-parent="#accDown">
+                            <div class="accordion-body">
+                                體驗在附中的實境解謎。<br>
+                                授課者：吳典頤。
+                                <span class="badge rounded-pill text-bg-success text-light cat-pill">實境/設計</span>
+                                <span class="badge rounded-pill text-bg-info text-dark cat-pill">活動</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item" data-cats="實境/設計">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#d9">
+                                W9｜怎麼設計謎題+實作體驗
+                            </button>
+                        </h2>
+                        <div id="d9" class="accordion-collapse collapse" data-bs-parent="#accDown">
+                            <div class="accordion-body">
+                                專業講師授課:如何設計實境解謎?並練習實際設計<br>
+                                授課者：聚樂邦學姊。
+                                <span class="badge rounded-pill text-bg-success text-light cat-pill">實境/設計</span>
+                                <span class="badge rounded-pill text-bg-info text-dark cat-pill">活動</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item" data-cats="實境/設計">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#d10">
+                                W10｜機關與解鎖體驗+(宣布下學年幹部)
+                            </button>
+                        </h2>
+                        <div id="d10" class="accordion-collapse collapse" data-bs-parent="#accDown">
+                            <div class="accordion-body">
+                                體驗常見的鎖和機關的破解方法。<br>
+                                授課者：吳翟+(項舒芸)。
+                                <span class="badge rounded-pill text-bg-warning text-dark cat-pill">邏輯/謎題</span>
+                                <span class="badge rounded-pill text-bg-success text-light cat-pill">實境/設計</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-cats="密碼學">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#d11">
+                                W11–12｜密碼學中階／高階
+                            </button>
+                        </h2>
+                        <div id="d11" class="accordion-collapse collapse" data-bs-parent="#accDown">
+                            <div class="accordion-body">
+                                認識現代密碼學及破解方法<br>
+                                授課者：吳翟。
+                                <span class="badge rounded-pill text-bg-dark cat-pill">密碼學</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item" data-cats="實境/設計">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#d13">
+                                W13–14｜如何設計有趣的遊戲體驗
+                            </button>
+                        </h2>
+                        <div id="d13" class="accordion-collapse collapse" data-bs-parent="#accDown">
+                            <div class="accordion-body">
+                                專業講師授課:如何設計出顧客喜歡的遊戲?及應用<br>
+                                授課者：未定。
+                                <span class="badge rounded-pill text-bg-dark cat-pill">密碼學</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item" data-cats="實境/設計">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#d15">
+                                W15–16｜劇本/謎題實作
+                            </button>
+                        </h2>
+                        <div id="d15" class="accordion-collapse collapse" data-bs-parent="#accDown">
+                            <div class="accordion-body">
+                                把這學期所習應用在製作成發:每個人需選擇一種成果發表形式(實境解謎/推理小說/推理劇本/劇本殺)<br>
+                                授課者：未定。
+                                <span class="badge rounded-pill text-bg-success cat-pill">創作/成果發表</span>
+                                <span class="badge rounded-pill text-bg-info text-dark cat-pill">活動</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item" data-cats="產出/發表">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#d17">
+                                W17–18｜成果發表+學期總結+頒獎
+                            </button>
+                        </h2>
+                        <div id="d17" class="accordion-collapse collapse" data-bs-parent="#accDown">
+                            <div class="accordion-body">
+                                每組或每人上台分享自己的設計+總結整學期所學+頒發個人獎MVP<br>
+                                授課者：未定。
+                                <span class="badge rounded-pill text-bg-success cat-pill">創作/成果發表</span>
+                                <span class="badge rounded-pill text-bg-info text-dark cat-pill">活動</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <small class="text-muted d-block mt-2">段考前一週除社團活動課外暫停社課。</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENTORS -->
+    <section id="mentors" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="fw-bold mb-4">推研教學組成員</h2>
+            <div class="row g-4">
+                <!-- 依檔案列名，可增刪 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-1">項舒芸</h5>
+                            <p class="text-muted mb-2">偉大的社長!!!</p>
+                            <span class="badge rounded-pill text-bg-primary cat-pill">入門</span>
+                            <span class="badge rounded-pill text-bg-secondary cat-pill">推理文學/時事</span>
+                            <span class="badge rounded-pill text-bg-success cat-pill">創作/成果發表</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-1">吳翟</h5>
+                            <p class="text-muted mb-2">解謎、桌遊、密碼學、機關</p>
+                            <span class="badge rounded-pill text-bg-warning text-dark cat-pill">邏輯/謎題</span>
+                            <span class="badge rounded-pill text-bg-warning text-dark cat-pill">桌遊/策略</span>
+                            <span class="badge rounded-pill text-bg-danger cat-pill">犯罪/心理/鑑識</span>
+                            <span class="badge text-bg-dark">密碼學</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-1">吳泰樂</h5>
+                            <p class="text-muted mb-2">海龜湯、狼人殺、犯罪心理</p>
+                            <span class="badge rounded-pill text-bg-primary cat-pill">入門</span>
+                            <span class="badge rounded-pill text-bg-secondary cat-pill">推理文學/時事</span>
+                            <span class="badge rounded-pill text-bg-warning text-dark cat-pill">桌遊/策略</span>
+                            <span class="badge rounded-pill text-bg-danger cat-pill">犯罪/心理/鑑識</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-1">吳典頤</h5>
+                            <p class="text-muted mb-2">桌遊、密碼學、機關與解鎖</p>
+                            <span class="badge rounded-pill text-bg-secondary cat-pill">推理文學/時事</span>
+                            <span class="badge rounded-pill text-bg-success text-light cat-pill">實境/設計</span>
+                            <span class="badge rounded-pill text-bg-danger cat-pill">犯罪/心理/鑑識</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+            <div class="container">
+                <h2 class="fw-bold mb-4">講師成員</h2>
+                <div class="row g-4">
+                    <!-- 依檔案列名，可增刪 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title mb-1">任德駿</h5>
+                                <p class="text-muted mb-2">偉大的社師!!!</p>
+                                <span class="badge rounded-pill text-bg-warning text-dark cat-pill">邏輯/謎題</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title mb-1">Amy</h5>
+                                <p class="text-muted mb-2">邏輯謎題</p>
+                                <span class="badge rounded-pill text-bg-warning text-dark cat-pill">邏輯/謎題</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title mb-1">張銓芬</h5>
+                                <p class="text-muted mb-2">經典推理電影</p>
+                                <span class="badge rounded-pill text-bg-secondary cat-pill">電影/劇本</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title mb-1">林千晴(公關)</h5>
+                                <p class="text-muted mb-2">經典推理文學</p>
+                                <span class="badge rounded-pill text-bg-success cat-pill">創作/成果發表</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-5">
+        <div class="container">
+            <h2 class="fw-bold mb-4">常見問答</h2>
+            <div class="accordion" id="accFaq">
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse"
+                            data-bs-target="#f1">需要先備知識嗎？</button></h2>
+                    <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#accFaq">
+                        <div class="accordion-body">不需要，上學期從體驗與基礎起步，下學期再進入設計與創作。</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#f2">評量或成果怎麼呈現？</button></h2>
+                    <div id="f2" class="accordion-collapse collapse" data-bs-parent="#accFaq">
+                        <div class="accordion-body">
+                            以歷程與期末成果為主，包含實境解謎、推理小說、劇本或劇本殺等發表。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="text-center py-4 mt-5">
+        <div class="container">
+            <br>
+            <div class="row gy-3 gx-md-5">
+
+                <div class="company-name mt-3">
+                    <h2>附中推理研究社 第一屆</h2>
+                </div>
+
+                <br><br><br>
+
+                <!-- Instagram -->
+                <div class="footer-item">
+                    <a href="https://instagram.com/hsnu_mic" target="_blank" class="footer-link">
+                        <div class="social-item">
+                            <i class="bi bi-instagram fs-4"></i>
+                            <span>Instagram：@hsnu_mic</span>
+                        </div>
+                    </a>
+                </div>
+                <!-- LINE -->
+                <div class="footer-item">
+                    <a href="https://line.me/ti/g2/DCLFJI9ssCnd926sGhR_ciOao71fseZ6iusTfg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+                        target="_blank" class="footer-link">
+                        <div class="social-item">
+                            <i class="bi bi-line fs-4"></i>
+                            <span>LINE：點我加入社群</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gmail -->
+                <div class="footer-item">
+                    <a href="mailto:hsnumic@gmail.com" class="footer-link">
+                        <div class="social-item">
+                            <i class="bi bi-envelope-fill fs-4"></i>
+                            <span>Gmail：hsnumic@gmail.com</span>
+                        </div>
+                    </a>
+                </div>
+
+                <br><br><br><br>
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<script src="js/lectureinfo.js"></script>
+
+</html>

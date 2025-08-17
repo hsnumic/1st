@@ -1,0 +1,48 @@
+.difficulty-select {
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.difficulty-select label {
+    color: #777;
+}
+
+.difficulty-select a {
+    text-decoration: none;
+    color: #ad7b56;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.difficulty-select a.active {
+    background-color: #ad7b56;
+    color: #fff;
+}
+
+.difficulty-select a:hover:not(.active) {
+    background-color: #decabb;
+    color: #ad7b56;
+}
+
+.puzzle-container {
+    padding: 20px;
+}
+
+.puzzle-block {
+    display: none;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fafafa;
+}
+
+
+.puzzle-block:nth-child(2) {
+    display: block;
+    /* 預設顯示中等 */
+}

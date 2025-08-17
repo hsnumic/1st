@@ -1,0 +1,14 @@
+.photo-frame {
+    width: auto; /* 设置相框的宽度 */
+    padding: 10px; /* 设置图片与相框之间的间距 */
+    border: 5px solid #888; /* 设置相框的边框 */
+    background-color: #fff; /* 设置相框的背景色 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 添加阴影效果 */
+    display: inline-block; /* 使相框可以水平排列 */
+}
+
+.photo-frame img {
+    width: 100%; /* 设置图片宽度为100%，使其适应相框宽度 */
+    height: auto; /* 保持图片的原始宽高比 */
+    display: block; /* 去除图片下方的空白 */
+}

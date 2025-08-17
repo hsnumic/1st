@@ -1,0 +1,53 @@
+/*本css與cardre.css打架*/
+
+.profile-img{
+    width: 90px;
+    height:90px;
+    clip-path:circle(50%);
+
+    /* 置中 */
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+
+    margin-top:-45px;
+}
+
+.profilediv .card{
+    background-color: beige;
+    height:450px;
+    border-radius: 20px;
+
+    margin:10px;
+}
+
+.profilediv .banner-image{
+    background-image: url("../images/profile-background.png");
+    height:200px;
+    width:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.profile-btn{
+    width:100%;
+    border:none;
+    font-size:20px;
+    color:white;
+    background-color:#ad7b56;
+    padding:20px;
+
+    /* 移到下方 */
+    position:absolute;
+    bottom:0;
+    left:0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.profile-btn:hover{
+    background-color:#b48f74;
+}

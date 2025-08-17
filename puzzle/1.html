@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>附中推理研究社</title>
+    <meta charset="UTF-8">
+
+    <!-- 響應式網站 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Boostrap5.0 導入程式 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- 連結導覽列CSS -->
+
+    <!-- body -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Navbar -->
+    <link rel="stylesheet" href="../css/navbar.css">
+    <!-- Bulletinboard -->
+    <link rel="stylesheet" href="../css/announcement.css">
+    <!-- Introduction -->
+    <link rel="stylesheet" href="../css/intro.css">
+    <!-- Information -->
+    <link rel="stylesheet" href="../css/info.css">
+    <!-- Puzzle -->
+    <link rel="stylesheet" href="../css/puzzle.css">
+    <link rel="stylesheet" href="../css/index-puzzle.css">
+    <!-- Footer -->
+    <link rel="stylesheet" href="../css/footer.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <!-- 品牌logo -->
+            <a class="navbar-brand" href="#"><img width="50px" height="50px" src="../images/mic.jpg"></a>
+            <div class="logo">附中推理研究社</div>
+
+            <!-- 第一部份：手機版 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 第二部份：桌上型電腦版 -->
+
+            <div class="collapse navbar-collapse" id="linkbar">
+                <!-- 列出內容 -->
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../clubinfo.html">社團介紹</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../lectureinfo.html">教學內容</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="../puzzle.html">謎題</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../login.html">登入</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../signup.html">註冊</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+    <!-- 題目詳情頁（依你的截圖繼續製作） -->
+    <section class="question-view container page-container my-4">
+        <div class="q-bar q-bar-top d-flex align-items-center gap-2 px-3 text-white fw-bold small">
+            <span class="me-1"></span> 這是第一個謎題
+        </div>
+        <div class="q-card">
+            <br>
+            <br>
+            <div class="q-header d-flex flex-wrap align-items-start gap-3">
+                <div class="q-badge-wrap text-center">
+                    <div class="q-badge">Q</div>
+                    <div class="d-flex q-rate mt-2">答對率：<span>61%</span></div>
+                    <div class="d-flex q-rate mt-2">難易度：<span>2星</span></div>
+                </div>
+                <div class="flex-grow-1">
+                    <h2 class="h3 fw-bold mb-1">空中相遇！誰離台灣更近？</h2>
+                    <a href="logic.html" class="link-secondary small">邏輯謎題</a>
+                    <div class="q-body mt-3">
+                        <p>
+                            小明搭飛機要從台灣飛往日本<br>
+                            小華搭飛機要從日本飛往台灣<br>
+                            <br>
+                            兩架飛機同時起飛<br>
+                            小明飛機時速1000公里<br>
+                            小華飛機時速1500公里<br>
+                            請問他們相遇時，誰離台灣比較近？<br>
+                        </p>
+                    </div>
+
+                    <div class="q-meta small text-muted mt-2">吳翟　2025-08-01 提供</div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <hr class="my-3" />
+            <br>
+            <br>
+            <div class="align-items-center gap-3">
+                <div class="q-badge">A</div>
+                <a class="btn btn-outline-primary btn-sm show-answer-btn">顯示答案</a>
+                <section class="answer-view container page-container my-5 answer" style="display: none;">
+                    <div class="answer-card p-4 bg-white shadow-sm rounded">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <h4 class="mb-0">一樣近。</h4>
+                        </div>
+                        <div class="alert alert-success d-flex justify-content-between align-items-center" role="alert">
+                            <div>
+                                <strong>你答對了嗎？</strong>
+                                <span class="ms-2">✔️ ❌ (答對與否不會公開，計算難度用)</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline-secondary">我要編輯 ✎</button>
+                        </div>
+                        <h5 class="fw-bold mt-4">解析</h5>
+                        <hr>
+                        <div class="explain-text">
+                            <p>讀者自證不難，留做課後習題</p>
+                        </div>
+                        <div class="text-end text-muted mt-3">
+                            👁️ 10,085
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="q-stats text-end mt-4 text-muted">
+                <i class="bi bi-chat-square-text"></i>
+                <span class="ms-1">73,221</span>
+            </div>
+        </div>
+        <div
+            onclick="window.location.href='2.html'"
+            class="q-bar q-bar-bottom d-flex justify-content-end align-items-center gap-2 px-3 text-white fw-bold small">
+            下一題精選邏輯謎題 ⟶
+        </div>
+    </section>
+
+
+    <footer class="text-center">
+        <div class="container">
+            <br>
+            <div class="row gy-3 gx-md-5">
+
+                <div class="company-name mt-3">
+                    <h2>附中推理研究社 第一屆</h2>
+                </div>
+
+                <br><br><br>
+
+                <!-- Instagram -->
+                <div class="footer-item">
+                    <a href="https://instagram.com/hsnu_mic" target="_blank" class="footer-link">
+                        <div class="social-item">
+                            <i class="bi bi-instagram fs-4"></i>
+                            <span>Instagram：@hsnu_mic</span>
+                        </div>
+                    </a>
+                </div>
+                <!-- LINE -->
+                <div class="footer-item">
+                    <a href="https://line.me/ti/g2/DCLFJI9ssCnd926sGhR_ciOao71fseZ6iusTfg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+                        target="_blank" class="footer-link">
+                        <div class="social-item">
+                            <i class="bi bi-line fs-4"></i>
+                            <span>LINE：點我加入社群</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gmail -->
+                <div class="footer-item">
+                    <a href="mailto:hsnumic@gmail.com" class="footer-link">
+                        <div class="social-item">
+                            <i class="bi bi-envelope-fill fs-4"></i>
+                            <span>Gmail：hsnumic@gmail.com</span>
+                        </div>
+                    </a>
+                </div>
+
+                <br><br><br><br>
+
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="../js/puzzle.js"></script>
+
+</html>

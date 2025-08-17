@@ -1,0 +1,108 @@
+/* remixed from Youtube CwCchanel : boostrap navbar */
+
+nav {
+    height: 70px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    background-color: #4e453e;
+}
+
+.nav-item {
+    background-color: #4e453e;
+    font-size: 20px;
+    width: 110px;
+}
+
+
+.navbar-toggler {
+    background-color: #fff;
+}
+
+.nav-link {
+    padding: 20px;
+    text-align: center;
+    color: #fff !important;
+}
+
+.navbar-brand {
+    padding-left: 20px;
+}
+
+.navbar-brand img {
+    border-radius: 50%;
+}
+
+.logo {
+    color: #fff;
+    font-size: 20px;
+    padding-right: 24.2px;
+}
+
+@media (max-width:990px) {
+    nav {
+        height: auto;
+    }
+
+    .nav-link {
+        padding: 10px 0;
+        width: calc(100vw - 39px);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background-color: #ad7b56;
+    }
+
+    .nav-link {
+        color: #ad7b56 !important;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: #fff !important;
+    }
+
+
+}
+
+@media (min-width:990px) {
+
+    .nav-item {
+        position: relative;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+    /* 底線效果（hover or active） */
+    .nav-item::after {
+        content: "";
+        position: absolute;
+        left: 10%;
+        bottom: 7px;
+        width: 80%;
+        height: 3px;
+        background-color: #ad7b56;
+        /* 淺棕底線 */
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-item:hover::after,
+    .nav-item.active::after {
+        transform: scaleX(1);
+    }
+
+    .nav-link.active,
+    .nav-link:hover {
+        color: #ad7b56 !important;
+    }
+
+    /* active 標籤的文字顏色 */
+    .nav-link {
+        color: #fff !important;
+    }
+
+}

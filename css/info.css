@@ -1,0 +1,55 @@
+/* 圖片垂直置中 */
+.image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+/* 右側文字區塊 垂直置中 */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 服務項目排版（icon + 文字） */
+.service-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+/* icon 樣式 */
+.service-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+/* 段落內文字 */
+
+.service-text {
+    min-height: 70px;
+}
+
+.service-text h5 {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.service-text p {
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+/* 標題樣式 */
+.section-title {
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.infotext {
+    font-size: large;
+}

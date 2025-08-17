@@ -1,0 +1,40 @@
+.letter {
+    background: #ece5b7;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    width: min(750px, calc(100vw - 60px));
+    font-size: medium;
+}
+
+
+.letter .signature {
+    text-align: right;
+}
+
+.letter p {
+    text-decoration: underline solid #a3a57b 2px;
+    text-underline-offset: 6px;
+    line-height: 2.2;
+}
+
+.letter img {
+    position: relative;
+    width: 150px;
+    height: auto;
+    opacity: 0.5;
+    object-fit: cover;
+    z-index: 1;
+}
+
+@media (max-width:990px) {
+    .letter {
+        font-size: small !important;
+    }
+
+    .letter img {
+        width: 80px;
+        height: auto;
+    }
+}
